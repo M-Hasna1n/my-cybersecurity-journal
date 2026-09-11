@@ -8,7 +8,8 @@ Creating file in Turbo C++
 a. click on file
 b. create new file
 c. save file as your desired name
-d. 
+d. run the file
+e. no errors, lab completed
 
 
 
