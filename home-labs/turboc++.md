@@ -11,5 +11,8 @@ c. save file as your desired name
 d. run the file
 e. no errors, lab completed
 
+##3. Key Takeways:
+I learned how to create new file, edit, compile, run and save.
+
 
 
