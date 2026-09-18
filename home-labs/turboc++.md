@@ -7,7 +7,6 @@ int main()
   printf("C Programming is boring");
   return 0;
 }
-'''c
 
 
 
