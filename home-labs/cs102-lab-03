@@ -1,0 +1,630 @@
+# Homelab 01: Programming Fundamentals (C Language)
+
+---
+
+## Task 1: Basic Input and Output Operations
+
+### Description
+
+This program demonstrates basic user input and output operations in C. It prompts the user to enter two integer values, stores them in memory using `scanf`, and then displays the entered values back to the console using `printf`.
+
+### Code
+
+```c
+//Task 1
+#include <stdio.stdio.h> // Note: matching screenshot
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+    
+    int val1, val2;
+    
+    printf("Enter a number for val1:");
+    scanf("%d", &val1);
+    printf("Enter a number for val2:");
+    scanf("%d", &val2);
+    
+    printf("The val1 is %d\n", val1);
+    printf("The val2 is %d\n", val2);
+    
+    return 0;
+}
+
+```
+
+> **Image Placement Suggestion:** Insert the code screenshot (`task 1 code.png`) here.
+
+### Output Explanation
+
+The program takes two integer inputs from the user (`50` and `100`) and prints them in sequence to confirm the successful read and storage operations.
+
+> **Image Placement Suggestion:** Insert the output terminal screenshot (`task 1 output.png`) here.
+
+---
+
+## Task 2: Arithmetic Operations (Addition)
+
+### Description
+
+This program calculates the sum of two integers provided by the user. It reads two integer values, performs addition using the `+` operator, stores the result in a variable named `sum`, and displays the final result.
+
+### Code
+
+```c
+//Task 2
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+    
+    int val1, val2, sum;
+    
+    printf("Enter a number for val1:");
+    scanf("%d", &val1);
+    printf("Enter a number for val2:");
+    scanf("%d", &val2);
+    
+    sum = val1 + val2;
+    printf("The sum is %d\n", sum);
+    
+    return 0;
+}
+
+```
+
+> **Image Placement Suggestion:** Insert the code screenshot (`task 2 code.png`) here.
+
+### Output Explanation
+
+The user inputs `10` and `20`. The program computes $10 + 20 = 30$ and outputs `The sum is 30`.
+
+> **Image Placement Suggestion:** Insert the output terminal screenshot (`task 2 output.png`) here.
+
+---
+
+## Task 3: Multi-Variable Addition
+
+### Description
+
+This program extends basic addition by performing the sum of three distinct integer inputs (`val1`, `val2`, and `val3`). The computed sum is stored in the `sum` variable and printed to the terminal.
+
+### Code
+
+```c
+//Task 3
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+    
+    int val1, val2, val3, sum;
+    
+    printf("Enter a number for val1:");
+    scanf("%d", &val1);
+    printf("Enter a number for val2:");
+    scanf("%d", &val2);
+    printf("Enter a number for val3:");
+    scanf("%d", &val3);
+    
+    sum = val1 + val2 + val3;
+    printf("The sum is %d\n", sum);
+    
+    return 0;
+}
+
+```
+
+> **Image Placement Suggestion:** Insert the code screenshot (`task 3 code.png`) here.
+
+### Output Explanation
+
+When inputs `10`, `20`, and `30` are entered, the program adds all three values together and displays `The sum is 60`.
+
+> **Image Placement Suggestion:** Insert the output terminal screenshot (`task 3 output.png`) here.
+
+---
+
+## Task 4: Basic Arithmetic (Subtraction & Multiplication)
+
+### Description
+
+This program performs two fundamental mathematical operations on two integer inputs: subtraction (`val1 - val2`) and multiplication (`val1 * val2`). Results are saved in separate variables (`sub` and `mult`) and displayed on individual lines.
+
+### Code
+
+```c
+//Task 4
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+    
+    int val1, val2, sub, mult;
+    
+    printf("Enter a number for val1:");
+    scanf("%d", &val1);
+    printf("Enter a number for val2:");
+    scanf("%d", &val2);
+    
+    sub = val1 - val2;
+    mult = val1 * val2;
+    
+    printf("The sub is %d\n", sub);
+    printf("The mult is %d\n", mult);
+    
+    return 0;
+}
+
+```
+
+> **Image Placement Suggestion:** Insert the code screenshot (`task 4 code.png`) here.
+
+### Output Explanation
+
+For user inputs `10` and `20`, the subtraction produces $10 - 20 = -10$ and multiplication produces $10 \times 20 = 200$.
+
+> **Image Placement Suggestion:** Insert the output terminal screenshot (`task 4 output.png`) here.
+
+---
+
+## Task 5: Division and Modulus Operations
+
+### Description
+
+This program demonstrates integer division (`/`) and the modulus operator (`%`). The modulus operator computes the remainder of division between two integers, while division evaluates the quotient.
+
+### Code
+
+```c
+//Task 5
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+    
+    int val1, val2, div, mod;
+    
+    printf("Enter a number for val1:");
+    scanf("%d", &val1);
+    printf("Enter a number for val2:");
+    scanf("%d", &val2);
+    
+    div = val1 / val2;
+    mod = val1 % val2;
+    
+    printf("The div is %d\n", div);
+    printf("The mod is %d\n", mod);
+    
+    return 0;
+}
+
+```
+
+> **Image Placement Suggestion:** Insert the code screenshot (`task 5 code.png`) here.
+
+### Output Explanation
+
+Entering `20` and `10` calculates the integer division quotient $20 / 10 = 2$ and remainder $20 \pmod{10} = 0$.
+
+> **Image Placement Suggestion:** Insert the output terminal screenshot (`task 5 output.png`) here.
+
+---
+
+## Task 6: Geometric Calculations (Rectangle Area & Perimeter)
+
+### Description
+
+This program calculates the area and perimeter of a rectangle based on length and width values entered by the user. It applies standard geometric formulas: $\text{Area} = \text{length} \times \text{width}$ and $\text{Perimeter} = 2 \times (\text{length} + \text{width})$.
+
+### Code
+
+```c
+//Task 6
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+
+    int length, width, area, perimeter;
+
+    printf("Enter a length:");
+    scanf("%d",&length);
+    printf("Enter a width:");
+    scanf("%d", &width);
+
+    area = length * width;
+    perimeter = 2 *(length + width);
+    printf("The area is %d\n", area);
+    printf("The perimeter is %d\n", perimeter);
+
+    return 0;
+}
+
+```
+
+> **Image Placement Suggestion:** Insert the code screenshot (`task 6 code.png`) here.
+> 
+> 
+
+### Output Explanation
+
+Given a length of `9` and a width of `6`, the program computes $\text{Area} = 9 \times 6 = 54$ and $\text{Perimeter} = 2 \times (9 + 6) = 30$.
+
+> **Image Placement Suggestion:** Insert the output terminal screenshot (`task 6 output_2.png`) here.
+> 
+> 
+
+---
+
+## Task 7: Digits Extraction and Summation
+
+### Description
+
+This program processes a 3-digit integer input to extract each digit individually using the modulus (`% 10`) and division (`/ 10`) operators. It then calculates and outputs the sum of the extracted digits.
+
+### Code
+
+```c
+    int num, original_num, sum, digit1, digit2, digit3;
+
+    printf("Enter a three digit number:");
+    scanf("%d",&num);
+
+    original_num = num;
+
+    digit3 = num % 10;
+    num = num / 10;
+
+    digit2 = num % 10;
+    num = num / 10;
+
+    digit1 = num;
+
+    sum = digit1 + digit2 + digit3;
+
+    printf("The sum of the digits of %d is %d\n", original_num, sum);
+
+```
+
+> **Image Placement Suggestion:** Insert the code screenshot (`task 7 code.png`) here.
+> 
+> 
+
+### Output Explanation
+
+Inputting `987` extracts digits `9`, `8`, and `7`. The program calculates $9 + 8 + 7 = 24$ and outputs the result.
+
+> **Image Placement Suggestion:** Insert the output terminal screenshot (`task 7 output_2.png`) here.
+> 
+> 
+
+---
+
+## Task 9: Total and Average Marks Calculation
+
+### Description
+
+This program prompts the user to enter marks for three subjects, calculates their total sum, and evaluates the average marks using integer division.
+
+### Code
+
+```c
+int main(int argc, char *argv[]) {
+
+    int subject1, subject2, subject3, total_marks, average_marks;
+
+    printf("Enter subject1 marks:");
+    scanf("%d",&subject1);
+    printf("Enter subject2 marks:");
+    scanf("%d",&subject2);
+    printf("Enter subject3 marks:");
+    scanf("%d",&subject3);
+
+    total_marks = subject1 + subject2 + subject3;
+    average_marks = total_marks/3;
+
+    printf("Total marks: %d\n", total_marks);
+    printf("Average marks: %d", average_marks);
+
+    return 0;
+}
+
+```
+
+> **Image Placement Suggestion:** Insert the code screenshot (`task 9 code.png`) here.
+> 
+> 
+
+### Output Explanation
+
+Entering `100` for all three subjects produces a total mark of `300` and an average mark of `100`.
+
+> **Image Placement Suggestion:** Insert the output terminal screenshot (`task 9 output.png`) here.
+> 
+> 
+
+---
+
+## Task 10: Time Unit Conversion (Seconds to Minutes)
+
+### Description
+
+This program converts a given total number of seconds into minutes and remaining seconds using division (`/ 60`) and modulus (`% 60`) operations.
+
+### Code
+
+```c
+//Task 10
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+
+    int seconds, minutes, remaining_sec;
+
+    printf("Enter seconds value between 1 & 60:");
+    scanf("%d",&seconds);
+
+    minutes = seconds/60;
+    remaining_sec = seconds%60;
+
+    printf("The number of minutes in %d seconds are %d\n", seconds, minutes);
+    printf("The number of remaining seconds are %d", remaining_sec);
+
+    return 0;
+}
+
+```
+
+> **Image Placement Suggestion:** Insert the code screenshot (`task 10 code.png`) here.
+> 
+> 
+
+### Output Explanation
+
+Entering `666` seconds calculates $666 / 60 = 11$ minutes and $666 \pmod{60} = 6$ remaining seconds.
+
+> **Image Placement Suggestion:** Insert the output terminal screenshot (`task 10 output.png`) here.
+> 
+> 
+
+---
+
+## Task 11: Difference of Squares Formula Evaluation
+
+### Description
+
+This program evaluates the quadratic algebraic identity $(a+b)(a-b)$ for two given input values `val1` and `val2`.
+
+### Code
+
+```c
+//Task 11
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+
+    int val1, val2, quadratic;
+
+    printf("Enter a number for val1:");
+    scanf("%d",&val1);
+    printf("Enter a number for val2:");
+    scanf("%d", &val2);
+
+    quadratic = (val1+val2) * (val1-val2);
+    printf("The result is %d\n", quadratic);
+
+    return 0;
+}
+
+```
+
+> **Image Placement Suggestion:** Insert the code screenshot (`task 11 code.png`) here.
+> 
+> 
+
+### Output Explanation
+
+When `val1 = 10` and `val2 = 10`, the formula calculates $(10+10) \times (10-10) = 20 \times 0 = 0$.
+
+> **Image Placement Suggestion:** Insert the output terminal screenshot (`task 11 output.png`) here.
+> 
+> 
+
+---
+
+## Task 12: Sum of Squares Calculation
+
+### Description
+
+This program accepts three integer values and computes the sum of their individual squares: $\text{quadratic} = (\text{val1}^2) + (\text{val2}^2) + (\text{val3}^2)$.
+
+### Code
+
+```c
+//Task 12
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+
+    int val1, val2, val3, quadratic;
+
+    printf("Enter a number for val1:");
+    scanf("%d",&val1);
+    printf("Enter a number for val2:");
+    scanf("%d", &val2);
+    printf("Enter a number for val3:");
+    scanf("%d", &val3);
+
+    quadratic = (val1*val1) + (val2*val2) + (val3*val3);
+    printf("The result is %d\n", quadratic);
+
+    return 0;
+}
+
+```
+
+> **Image Placement Suggestion:** Insert the code screenshot (`task 12 code.png`) here.
+> 
+> 
+
+### Output Explanation
+
+For inputs `12`, `34`, and `56`, the program computes $12^2 + 34^2 + 56^2 = 144 + 1156 + 3136 = 4436$.
+
+> **Image Placement Suggestion:** Insert the output terminal screenshot (`task 12 output.png`) here.
+> 
+> 
+
+---
+
+## Task 13: Currency Denomination Breakdown
+
+### Description
+
+This program breaks down a total amount of rupees into standard currency note denominations (500, 100, 50, 10) and calculates any remaining rupees.
+
+### Code
+
+```c
+    int rupees, notes500, notes100, notes50, notes10, remaining_rupees;
+
+    printf("Enter rupees amount:");
+    scanf("%d",&rupees);
+
+    notes500 = rupees/500;
+    remaining_rupees = rupees%500;
+
+    notes100 = remaining_rupees/100;
+    remaining_rupees = remaining_rupees%100;
+
+    notes50 = remaining_rupees/50;
+    remaining_rupees = remaining_rupees%50;
+
+    notes10 = remaining_rupees/10;
+    remaining_rupees = remaining_rupees%10;
+
+    printf("The number of 500 rupee notes in %d rupees are %d\n", rupees, notes500);
+    printf("The number of 100 rupee notes in %d rupees are %d\n", remaining_rupees, notes100);
+    printf("The number of 50 rupee notes in %d rupees are %d\n", remaining_rupees, notes50);
+    printf("The number of 10 rupee notes in %d rupees are %d\n", remaining_rupees, notes100);
+    printf("Reamining rupees: %d", remaining_rupees);
+
+    return 0;
+
+```
+
+> **Image Placement Suggestion:** Insert the code screenshot (`task 13 code.png`) here.
+> 
+> 
+
+### Output Explanation
+
+Inputting `555` rupees breaks down into 1 note of 500, 0 notes of 100, 1 note of 50, 0 notes of 10, and `5` remaining rupees.
+
+> **Image Placement Suggestion:** Insert the output terminal screenshot (`task 13 output.png`) here.
+> 
+> 
+
+---
+
+## Task 14: Floating-Point Average Calculation
+
+### Description
+
+This program calculates the average of two integer numbers as a floating-point value formatted to two decimal places (`%.2f`). Dividing by `2.0` ensures floating-point conversion during division.
+
+### Code
+
+```c
+//Task 14
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+
+    int num1, num2, total;
+    float average;
+
+    printf("Enter first number:");
+    scanf("%d",&num1);
+    printf("Enter second number:");
+    scanf("%d",&num2);
+
+    total = num1 + num2;
+    average = total/2.0;
+
+    printf("Average number: %.2f", average);
+
+    return 0;
+}
+
+```
+
+> **Image Placement Suggestion:** Insert the code screenshot (`task 14 code.png`) here.
+> 
+> 
+
+### Output Explanation
+
+Inputting numbers `50` and `100` computes a total of $150$, resulting in an average display of `75.00`.
+
+> **Image Placement Suggestion:** Insert the output terminal screenshot (`task 14 output.png`) here.
+> 
+> 
+
+---
+
+## Task 15: Operator Precedence and Parentheses Impact
+
+### Description
+
+This program highlights operator precedence in C arithmetic expressions. It compares $a + b \times c$ (where multiplication precedes addition) against $(a + b) \times c$ (where parentheses override default precedence).
+
+### Code
+
+```c
+//Task 15
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+
+    int a, b, c, result1, result2;
+
+    printf("Enter a number for val1:");
+    scanf("%d",&a);
+    printf("Enter a number for val2:");
+    scanf("%d", &b);
+    printf("Enter a number for val3:");
+    scanf("%d", &c);
+
+    result1 = a + b * c; //Multiplication before addition
+    result2 = (a + b) * c; //Parenthesis before multiplication
+
+    printf("The result are: \n");
+    printf("Without parenthesis (a+b*c): %d\n", result1);
+    printf("With parenthesis ((a+b)*c): %d\n", result2);
+    return 0;
+}
+
+```
+
+> **Image Placement Suggestion:** Insert the code screenshot (`task 15 code.png`) here.
+> 
+> 
+
+### Output Explanation
+
+For inputs $a = 1$, $b = 2$, $c = 3$:
+
+* Without parentheses: $1 + (2 \times 3) = 7$
+
+* With parentheses: $(1 + 2) \times 3 = 9$
+
+
+> **Image Placement Suggestion:** Insert the output terminal screenshot (`task 15 output.png`) here.
+> 
+>
