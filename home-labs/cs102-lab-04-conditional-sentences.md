@@ -1,4 +1,4 @@
-# Homelab 04: Conditional Statements in C
+# Programming Fundamentals(C language) - Lab 04
 
 This repository contains C source code and execution summaries for tasks covering conditional logic (`if`, `if-else`, `else-if` ladders, and `switch` statements).
 
