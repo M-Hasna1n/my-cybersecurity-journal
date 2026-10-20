@@ -1,4 +1,4 @@
-# Programming Fundamentals - Lab 01
+# Programming Fundamentals(C language) - Lab 01
 
 ```c
 #include <stdio.h>
