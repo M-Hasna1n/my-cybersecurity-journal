@@ -1,14 +1,5 @@
 # LAB REPORT 09 & 10: POINTERS AND STRING HANDLING IN C
 
-## 📌 Student Information
-
-* **Name:** M. Hasnain
-* **Section:** C
-* **Roll No:** 29
-* **Reg No:** 1414
-* **Course:** Programming Fundamentals (Lab)
-* **Instructor:** Ms. Hafsa
-
 ---
 
 # LAB 09: POINTERS IN C
